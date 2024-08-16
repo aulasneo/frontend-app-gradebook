@@ -22,7 +22,7 @@ export const AdjustedGradeInput = () => {
   const { formatMessage } = useIntl();
 
   return (
-    <>
+    <span>
       <Form.Control
         type="number"
         name="adjustedGradeValue"
@@ -31,7 +31,7 @@ export const AdjustedGradeInput = () => {
         size="sm"
       />
       {value > possibleGrade ? <div style={{ color: 'red' }}>{ formatMessage(messages.adjustedGradeError) } { possibleGrade }</div> : hintText}
-    </>
+    </span>
   );
 };
 
