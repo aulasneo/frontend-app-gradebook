@@ -12,7 +12,7 @@ import OverrideTable from './OverrideTable';
 import ModalHeaders from './ModalHeaders';
 import useEditModalData from './hooks';
 import messages from './messages';
-import useAdjustedGradeInputData from "./OverrideTable/AdjustedGradeInput/hooks.js";
+import useAdjustedGradeInputData from './OverrideTable/AdjustedGradeInput/hooks';
 
 /**
  * <EditModal />
@@ -34,7 +34,7 @@ export const EditModal = () => {
 
   const {
     value,
-    possibleGrade
+    possibleGrade,
   } = useAdjustedGradeInputData();
 
   return (
@@ -65,7 +65,7 @@ export const EditModal = () => {
           </ModalDialog.CloseButton>
           <Button variant="primary" onClick={handleAdjustedGradeClick} disabled={value > possibleGrade}>
             {formatMessage(messages.saveGrade)}
-          </Button>    
+          </Button>
         </ActionRow>
       </ModalDialog.Footer>
     </ModalDialog>
